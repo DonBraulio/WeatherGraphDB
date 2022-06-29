@@ -1,7 +1,7 @@
 //1.Import stations
 MATCH (s:Station) DETACH DELETE s;
 
-DROP CONSTRAINT UniqueStationName;
+DROP CONSTRAINT UniqueStationName IF EXISTS;
 
 CREATE CONSTRAINT UniqueStationName ON (s:Station) ASSERT s.name IS UNIQUE;
 

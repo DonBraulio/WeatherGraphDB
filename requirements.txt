@@ -1,0 +1,5 @@
+jupyter
+pandas
+py2neo
+neo4jupyter
+matplotlib

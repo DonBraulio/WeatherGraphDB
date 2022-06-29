@@ -1,7 +1,7 @@
 //2.Import measurements
 MATCH (m:Measurement) DETACH DELETE m;
 
-DROP CONSTRAINT UniqueMeasurementStationTime;
+DROP CONSTRAINT UniqueMeasurementStationTime IF EXISTS;
 
 CREATE CONSTRAINT UniqueMeasurementStationTime ON (m:Measurement) ASSERT (m.station_name, m.name) IS UNIQUE;
 
